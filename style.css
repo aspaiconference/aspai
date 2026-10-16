@@ -1417,6 +1417,11 @@ a:hover {
   gap: var(--space-lg);
 }
 
+/* Single card at half width (matches a two-card row) */
+.chairs-grid--half {
+  grid-template-columns: repeat(auto-fill, minmax(max(280px, calc((100% - var(--space-lg)) / 2)), 1fr));
+}
+
 .chair-card {
   background: var(--color-surface);
   padding: var(--space-xl);
