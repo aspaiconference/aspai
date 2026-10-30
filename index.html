@@ -8,8 +8,8 @@
        ASPAI 시리즈 첫 화면 (aspaiconference.org)
        매년 이 페이지에서 바꿀 곳:
          ① 상단 메뉴의 "Next" / "Latest" 링크와 문구
-         ② Upcoming 목록: 새 연도 카드 추가
-         ③ 행사가 끝난 연도 카드는 Past Editions 맨 위로 이동
+         ② 행사 목록: 새 연도 항목을 맨 위에 추가 (최신 연도가 위)
+         ③ id="past" 는 "이미 끝난 행사 중 가장 최근 항목"에 붙입니다 (Past Editions 메뉴가 가리킴)
        썸네일 사진은 assets/editions/<연도>.jpg (가로:세로 = 2:1 권장)
        contact@email.com 은 샘플 주소입니다 (2곳). 실제 연락처로 바꾸세요.
        ============================================================ -->
@@ -53,28 +53,19 @@
   <main>
     <section class="section">
       <div class="container series-container">
-        <p class="series-intro">The <strong>Asia-Pacific Symposium on Process and Artificial Intelligence (ASPAI)</strong> is an annual forum of the <strong>Asia-Pacific Process Intelligence (APPI) Network</strong>, bringing together researchers, practitioners, and policymakers to advance process intelligence, AI-driven process analytics, and context-sensitive BPM across the Asia-Pacific region.</p>
-
-        <h2 class="section-title" id="upcoming">Upcoming</h2>
         <ul class="edition-list">
           <li class="edition">
             <a href="2027/" class="edition-thumb edition-thumb-tba" aria-label="ASPAI 2027">2027</a>
             <div class="edition-body">
-              <h3 class="edition-title"><a href="2027/">ASPAI 2027</a></h3>
-              <p class="edition-name">3rd Asia-Pacific Symposium on Process and Artificial Intelligence</p>
+              <h2 class="edition-title"><a href="2027/">Asia-Pacific Symposium on Process and AI 2027</a></h2>
               <p class="edition-meta">Venue and dates to be announced</p>
             </div>
           </li>
-        </ul>
-
-        <h2 class="section-title" id="past">Past Editions</h2>
-        <ul class="edition-list">
-          <li class="edition">
+          <li class="edition" id="past">
             <a href="2026/" class="edition-thumb"><img src="assets/editions/2026.jpg" alt="Pohang, POSTECH" /></a>
             <div class="edition-body">
-              <h3 class="edition-title"><a href="2026/">ASPAI 2026</a></h3>
-              <p class="edition-name">2nd Asia-Pacific Symposium on Process and Artificial Intelligence</p>
-              <p class="edition-meta">Seoul &amp; Pohang/Korea, August 24–28, 2026<br />Industry Day · Conference · Summer School</p>
+              <h2 class="edition-title"><a href="2026/">Asia-Pacific Symposium on Process and AI 2026</a></h2>
+              <p class="edition-meta">Seoul &amp; Pohang/Korea, August 24–28, 2026</p>
             </div>
           </li>
         </ul>
