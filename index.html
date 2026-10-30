@@ -2,41 +2,107 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ASPAI – Asia-Pacific Symposium on Process and Artificial Intelligence</title>
-
   <!-- ============================================================
-       aspaiconference.org 로 들어오면 "현재 연도" 폴더로 이동시키는 페이지입니다.
-       새 연도 사이트를 공개할 때 아래 3곳의 "2026/" 을 새 연도(예: "2027/")로 바꾸세요.
-         ① meta refresh   ② location.replace   ③ 본문 링크
+       ASPAI 시리즈 첫 화면 (aspaiconference.org)
+       매년 이 페이지에서 바꿀 곳:
+         ① 상단 메뉴의 "Next" / "Latest" 링크와 문구
+         ② Upcoming 목록: 새 연도 카드 추가
+         ③ 행사가 끝난 연도 카드는 Past Editions 맨 위로 이동
+       썸네일 사진은 assets/editions/<연도>.jpg (가로:세로 = 2:1 권장)
+       contact@email.com 은 샘플 주소입니다 (2곳). 실제 연락처로 바꾸세요.
        ============================================================ -->
-  <meta http-equiv="refresh" content="0; url=2026/" />
-
-  <script>
-    // 해시(#key-dates 등)와 쿼리스트링을 유지한 채 이동
-    location.replace("2026/" + location.search + location.hash);
-  </script>
-
-  <style>
-    body {
-      margin: 0;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #0b1020;
-      color: #e8ecf8;
-      font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-      text-align: center;
-      padding: 24px;
-    }
-    a { color: #7aa2ff; }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <p>
-    Redirecting to ASPAI…<br />
-    If nothing happens, <a href="2026/">click here</a>.
-  </p>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <a href="mailto:contact@email.com">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-title">ASPAI Symposium Series</span>
+        <span class="logo-subtitle">Asia-Pacific Symposium on Process and Artificial Intelligence</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Primary Navigation -->
+  <nav class="main-nav">
+    <div class="container">
+      <ul class="nav-menu">
+        <li><a href="2027/">Next: 2027 – TBA</a></li>
+        <li><a href="2026/">Latest: 2026 – Pohang/Korea</a></li>
+        <li><a href="#past">Past Editions</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <section class="section">
+      <div class="container series-container">
+        <p class="series-intro">The <strong>Asia-Pacific Symposium on Process and Artificial Intelligence (ASPAI)</strong> is an annual forum of the <strong>Asia-Pacific Process Intelligence (APPI) Network</strong>, bringing together researchers, practitioners, and policymakers to advance process intelligence, AI-driven process analytics, and context-sensitive BPM across the Asia-Pacific region.</p>
+
+        <h2 class="section-title" id="upcoming">Upcoming</h2>
+        <ul class="edition-list">
+          <li class="edition">
+            <a href="2027/" class="edition-thumb edition-thumb-tba" aria-label="ASPAI 2027">2027</a>
+            <div class="edition-body">
+              <h3 class="edition-title"><a href="2027/">ASPAI 2027</a></h3>
+              <p class="edition-name">3rd Asia-Pacific Symposium on Process and Artificial Intelligence</p>
+              <p class="edition-meta">Venue and dates to be announced</p>
+            </div>
+          </li>
+        </ul>
+
+        <h2 class="section-title" id="past">Past Editions</h2>
+        <ul class="edition-list">
+          <li class="edition">
+            <a href="2026/" class="edition-thumb"><img src="assets/editions/2026.jpg" alt="Pohang, POSTECH" /></a>
+            <div class="edition-body">
+              <h3 class="edition-title"><a href="2026/">ASPAI 2026</a></h3>
+              <p class="edition-name">2nd Asia-Pacific Symposium on Process and Artificial Intelligence</p>
+              <p class="edition-meta">Seoul &amp; Pohang/Korea, August 24–28, 2026<br />Industry Day · Conference · Summer School</p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="2027/">ASPAI 2027</a>
+        <a href="2026/">ASPAI 2026</a>
+        <a href="mailto:contact@email.com">Contact</a>
+      </div>
+      <p class="footer-copy">© ASPAI – Asia-Pacific Symposium on Process and Artificial Intelligence. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function () {
+      document.body.classList.toggle('nav-open');
+    });
+    document.querySelectorAll('.nav-menu a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        document.body.classList.remove('nav-open');
+      });
+    });
+  </script>
 </body>
 </html>

@@ -1,21 +1,23 @@
 # ASPAI 홈페이지 (aspaiconference.org)
 
 Asia-Pacific Symposium on Process and Artificial Intelligence(ASPAI) 공식 홈페이지 저장소입니다.
-매년 열리는 행사라서 **연도별 폴더**로 사이트를 나눠 관리합니다.
+매년 열리는 행사라서 [icpmconference.org](https://icpmconference.org)처럼
+**시리즈 첫 화면 + 연도별 사이트** 구조로 관리합니다.
 
 ## 폴더 구조
 
 ```
 /
 ├── CNAME        ← 도메인(aspaiconference.org) 설정. 절대 옮기거나 지우지 마세요.
-├── index.html   ← aspaiconference.org 접속 시 "현재 연도" 폴더로 이동시키는 페이지
+├── index.html   ← 시리즈 첫 화면: 연도별 행사 목록 (Next / Latest / Past Editions)
+├── assets/      ← 시리즈 첫 화면 전용 style.css, 행사별 썸네일(editions/<연도>.jpg)
 ├── 404.html     ← 옛 주소(/summer-school.html 등)를 /2026/... 으로 넘겨주는 페이지
 ├── 2026/        ← ASPAI 2026 사이트 (행사 종료, 보관용 — 수정하지 마세요)
 └── 2027/        ← ASPAI 2027 사이트 (작업 중)
 ```
 
 - 각 연도 폴더는 **독립된 사이트**입니다. `style.css`, 이미지, 스크립트를 폴더마다 따로 가집니다.
-  2027 디자인을 바꿔도 2026 보관본이 깨지지 않게 하기 위해서입니다.
+  2027 디자인을 바꿔도 2026 보관본이나 시리즈 첫 화면이 깨지지 않게 하기 위해서입니다.
 - 주소는 폴더 그대로 붙습니다: `2027/index.html` → `https://aspaiconference.org/2027/`
 
 ## 2027 작업 방법
@@ -37,22 +39,22 @@ Asia-Pacific Symposium on Process and Artificial Intelligence(ASPAI) 공식 홈�
 python3 -m http.server 8000
 ```
 
-브라우저에서 `http://localhost:8000/2027/` 을 엽니다.
+브라우저에서 `http://localhost:8000/` (시리즈 첫 화면) 또는 `http://localhost:8000/2027/` 을 엽니다.
 (404.html의 옛 주소 이동은 GitHub Pages에서만 동작합니다.)
 
 ## 배포
 
 GitHub Pages로 배포됩니다. `main` 브랜치에 push하면 1~2분 뒤 사이트에 반영됩니다.
 
-## 새 연도 사이트 공개하기 (매년 한 번)
+## 시리즈 첫 화면 갱신하기 (매년)
 
-2027 사이트가 준비되면:
+루트 `index.html` 맨 위 주석에 바꿀 곳이 정리돼 있습니다.
 
-1. 루트 `index.html`에서 `2026/` 3곳을 `2027/`로 바꿉니다. (파일 안 주석 참고)
-2. (선택) `2026/` 페이지 상단에 "지난 행사 보관본입니다 → ASPAI 2027" 안내를 넣습니다.
-3. push 후 `https://aspaiconference.org/` 접속 시 2027로 넘어가는지 확인합니다.
-
-다음 해(2028)를 시작할 때는 `2027/`의 `style.css`와 기본 페이지를 복사해 `2028/` 폴더를 만들면 됩니다.
+- **장소·일정이 정해지면:** 상단 메뉴 `Next: 2027 – TBA`와 Upcoming 카드의 문구를 바꾸고,
+  썸네일 사진을 `assets/editions/2027.jpg`로 넣어 글자만 있는 "2027" 박스를 사진으로 바꿉니다.
+- **행사가 끝나면:** 상단 메뉴 `Latest`를 그 연도로 바꾸고, 그 연도 카드를 Past Editions 맨 위로 옮깁니다.
+- **다음 해(2028) 준비를 시작하면:** `2027/`의 `style.css`와 기본 페이지를 복사해 `2028/` 폴더를 만들고,
+  `Next` 메뉴와 Upcoming 카드를 2028로 바꿉니다.
 
 ## 주의사항
 
