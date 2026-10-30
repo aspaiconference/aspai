@@ -1830,6 +1830,11 @@ a:hover {
     border-radius: var(--radius);
   }
 
+  /* 터치 화면에서는 hover 대신 탭(dropdown-open)으로만 펼침 */
+  .has-dropdown:hover .dropdown {
+    display: none;
+  }
+
   .has-dropdown.dropdown-open .dropdown {
     display: block;
   }

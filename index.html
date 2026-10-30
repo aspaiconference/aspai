@@ -8,8 +8,9 @@
        ASPAI 시리즈 첫 화면 (aspaiconference.org)
        매년 이 페이지에서 바꿀 곳:
          ① 상단 메뉴의 "Next" / "Latest" 링크와 문구
-         ② 행사 목록: 새 연도 항목을 맨 위에 추가 (최신 연도가 위)
-         ③ id="past" 는 "이미 끝난 행사 중 가장 최근 항목"에 붙입니다 (Past Editions 메뉴가 가리킴)
+         ② 상단 메뉴 "Past" 드롭다운: 새 연도를 맨 위에 추가
+         ③ 행사 목록: 새 연도 항목을 맨 위에 추가 (최신 연도가 위)
+         ④ id="past" 는 "이미 끝난 행사 중 가장 최근 항목"에 붙입니다 (PC에서 "Past"를 클릭하면 이동)
        썸네일 사진은 assets/editions/<연도>.jpg (가로:세로 = 2:1 권장)
        contact@email.com 은 샘플 주소입니다 (2곳). 실제 연락처로 바꾸세요.
        ============================================================ -->
@@ -45,7 +46,13 @@
       <ul class="nav-menu">
         <li><a href="2027/">Next: 2027 – TBA</a></li>
         <li><a href="2026/">Latest: 2026 – Pohang/Korea</a></li>
-        <li><a href="#past">Past Editions</a></li>
+        <li class="has-dropdown">
+          <a href="#past">Past</a>
+          <ul class="dropdown">
+            <li><a href="2027/">2027 – TBA</a></li>
+            <li><a href="2026/">2026 – Pohang/Korea</a></li>
+          </ul>
+        </li>
       </ul>
     </div>
   </nav>
@@ -86,12 +93,30 @@
   </footer>
 
   <script>
+    var isMobileNav = function () {
+      return window.matchMedia('(max-width: 992px)').matches;
+    };
     document.querySelector('.nav-toggle').addEventListener('click', function () {
       document.body.classList.toggle('nav-open');
     });
     document.querySelectorAll('.nav-menu a').forEach(function (a) {
-      a.addEventListener('click', function () {
+      a.addEventListener('click', function (e) {
+        var item = this.parentElement;
+        // 모바일 메뉴에서 "Past"를 누르면 이동하지 않고 연도 목록을 펼치거나 접습니다
+        if (item.classList.contains('has-dropdown') && isMobileNav()) {
+          e.preventDefault();
+          item.classList.toggle('dropdown-open');
+          return;
+        }
         document.body.classList.remove('nav-open');
+      });
+    });
+    document.querySelectorAll('.has-dropdown').forEach(function (item) {
+      item.addEventListener('mouseenter', function () {
+        if (!isMobileNav()) this.classList.add('dropdown-open');
+      });
+      item.addEventListener('mouseleave', function () {
+        if (!isMobileNav()) this.classList.remove('dropdown-open');
       });
     });
   </script>
