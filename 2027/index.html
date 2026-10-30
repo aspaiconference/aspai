@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ASPAI 2027 – 3rd Asia-Pacific Symposium on Process and Artificial Intelligence</title>
+  <!-- ============================================================
+       ASPAI 2027 더미 페이지입니다. 이 폴더(2027/)에서 작업을 이어가세요.
+       - 디자인/컴포넌트는 ../2026/ 의 페이지들을 참고해 복사해 오면 됩니다.
+       - contact@email.com 은 샘플 주소입니다 (3곳). 실제 연락처로 바꾸세요.
+       ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <a href="mailto:contact@email.com">Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <span class="logo-title">ASPAI 2027</span>
+        <span class="logo-subtitle">3rd Asia-Pacific Symposium on Process and AI</span>
+      </a>
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Primary Navigation -->
+  <nav class="main-nav">
+    <div class="container">
+      <ul class="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li class="has-dropdown">
+          <a href="../2026/">Past Editions</a>
+          <ul class="dropdown">
+            <li><a href="../2026/">ASPAI 2026</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <!-- Hero Banner -->
+    <section class="hero-banner">
+      <div class="container hero-inner">
+        <p class="hero-conf-name">The 3rd Asia-Pacific Symposium on Process and Artificial Intelligence</p>
+        <h1 class="hero-title">ASPAI 2027</h1>
+        <p class="hero-date">
+          <span class="hero-date-icon">📅</span> Dates TBA
+          <span class="hero-date-sep">·</span>
+          <span class="hero-date-icon">📍</span> Venue TBA
+        </p>
+        <div class="hero-cta">
+          <a href="../2026/" class="btn btn-hero-secondary">Visit ASPAI 2026</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Welcome Section -->
+    <section id="welcome" class="section welcome welcome-page">
+      <div class="container">
+        <h2 class="section-title">Coming Soon</h2>
+        <div class="welcome-content-inner">
+          <div class="welcome-text-block">
+            <p>The <strong>3rd Asia-Pacific Symposium on Process and Artificial Intelligence (ASPAI 2027)</strong> is being prepared. Dates, venue, and the call for papers will be announced on this page.</p>
+            <p>For inquiries, please contact <a href="mailto:contact@email.com">contact@email.com</a>.</p>
+            <p class="welcome-chair"><strong>ASPAI 2027 Organizing Committee</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="../2026/">ASPAI 2026</a>
+        <a href="mailto:contact@email.com">Contact</a>
+      </div>
+      <p class="footer-copy">© 2027 ASPAI 2027 – 3rd Asia-Pacific Symposium on Process and Artificial Intelligence. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.nav-toggle').addEventListener('click', function () {
+      document.body.classList.toggle('nav-open');
+    });
+    document.querySelectorAll('.nav-menu a').forEach(function (a) {
+      a.addEventListener('click', function () {
+        document.body.classList.remove('nav-open');
+      });
+    });
+    document.querySelectorAll('.has-dropdown').forEach(function (item) {
+      item.addEventListener('mouseenter', function () {
+        this.classList.add('dropdown-open');
+      });
+      item.addEventListener('mouseleave', function () {
+        this.classList.remove('dropdown-open');
+      });
+    });
+  </script>
+</body>
+</html>

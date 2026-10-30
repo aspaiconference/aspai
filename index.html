@@ -2,247 +2,41 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>ASPAI 2026 – 2nd Asia-Pacific Symposium on Process and Artificial Intelligence</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
-  <script src="search.js" defer></script>
-</head>
-<body>
-  <!-- Top Bar -->
-  <div class="top-bar">
-    <div class="container top-bar-inner">
-      <a href="mailto:eon7777@postech.ac.kr">Contact Us</a>
-      <div class="search-box">
-        <input type="text" id="searchInput" placeholder="Search..." aria-label="Search site" />
-        <button type="button" id="searchBtn" aria-label="Search">
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-        </button>
-        <div id="searchResults" class="search-results"></div>
-      </div>
-    </div>
-  </div>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ASPAI – Asia-Pacific Symposium on Process and Artificial Intelligence</title>
 
-  <!-- Header -->
-  <header class="header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo">
-        <span class="logo-title">ASPAI 2026</span>
-        <span class="logo-subtitle">2nd Asia-Pacific Symposium on Process and AI</span>
-      </a>
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </header>
-
-  <!-- Primary Navigation -->
-  <nav class="main-nav">
-    <div class="container">
-      <ul class="nav-menu">
-        <li><a href="index.html">Home</a></li>
-        <li class="has-dropdown">
-          <a href="general-info.html">General Info</a>
-          <ul class="dropdown">
-            <li><a href="general-info.html#key-dates">Key Dates</a></li>
-            <li><a href="general-info.html#accommodation">Accommodation</a></li>
-            <li><a href="general-info.html#venue">Venue</a></li>
-            <li><a href="general-info.html#getting-to-pohang">Getting to Pohang</a></li>
-            <li><a href="general-info.html#shuttle-bus">Shuttle Bus</a></li>
-            <li><a href="general-info.html#committee">Committee</a></li>
-          </ul>
-        </li>
-        <li class="has-dropdown">
-          <a href="industry-day.html">Industry Day</a>
-          <ul class="dropdown">
-            <li><a href="industry-day.html#program-seoul">Program Details (Seoul)</a></li>
-            <li><a href="industry-day.html#venue-seoul">Venue (Seoul)</a></li>
-            <li><a href="industry-day.html#program-pohang">Program Details (Pohang)</a></li>
-            <li><a href="industry-day.html#venue-pohang">Venue (Pohang)</a></li>
-          </ul>
-        </li>
-        <li class="has-dropdown">
-          <a href="conference.html">Conference</a>
-          <ul class="dropdown">
-            <li><a href="call-for-papers.html">Call for Papers</a></li>
-            <li><a href="conference.html#keynotes">Keynote</a></li>
-            <li><a href="conference.html#program-details">Program Details</a></li>
-            <li><a href="conference.html#poster-session">Poster Session</a></li>
-            <li><a href="conference.html#venue">Venue</a></li>
-          </ul>
-        </li>
-        <li class="has-dropdown">
-          <a href="summer-school.html">Summer School</a>
-          <ul class="dropdown">
-            <li><a href="summer-school.html#program-details">Program Details</a></li>
-            <li><a href="summer-school-lecturers.html">Lecturers</a></li>
-            <li><a href="summer-school-preparation.html">Preparation</a></li>
-            <li><a href="summer-school.html#venue">Venue</a></li>
-          </ul>
-        </li>
-        <li><a href="registration.html">Registration</a></li>
-        <li><a href="visa-information.html">Visa Information</a></li>
-        <li><a href="sponsors.html">Sponsors</a></li>
-      </ul>
-    </div>
-  </nav>
-
-  <main>
-    <!-- Hero Banner: only this block switches between ASPAI / Summer School (dots + Register per slide) -->
-    <section class="hero-banner hero-banner-with-carousel">
-      <div class="hero-pattern" aria-hidden="true"></div>
-      <div class="hero-carousel" id="heroCarousel">
-        <div class="hero-carousel-track">
-          <!-- Slide 1: Industry Day (registration not yet open — no Register button) -->
-          <div class="hero-slide" data-slide="0">
-            <div class="container hero-inner">
-              <p class="hero-conf-name">Process Mining Industry Day</p>
-              <h1 class="hero-title">Industry Day 2026</h1>
-              <p class="hero-date">
-                <span class="hero-date-icon">📅</span> August 24, 2026
-                <span class="hero-date-sep">·</span>
-                <span class="hero-date-icon">📍</span> Seoul, Republic of Korea
-              </p>
-              <div class="hero-cta">
-                <a href="industry-day-program.html" class="btn btn-hero-secondary">Program Details</a>
-              </div>
-            </div>
-          </div>
-          <!-- Slide 2: ASPAI -->
-          <div class="hero-slide" data-slide="1" data-register-href="https://pco.postech.ac.kr/pco/events/events.do?mode=view&eventId=147">
-            <div class="container hero-inner">
-              <p class="hero-conf-name">The 2nd Asia-Pacific Symposium on Process and Artificial Intelligence</p>
-              <h1 class="hero-title">ASPAI 2026</h1>
-              <p class="hero-date">
-                <span class="hero-date-icon">📅</span> August 25–26, 2026
-                <span class="hero-date-sep">·</span>
-                <span class="hero-date-icon">📍</span> Pohang, Republic of Korea
-              </p>
-              <div class="hero-cta">
-                <a href="https://pco.postech.ac.kr/pco/events/events.do?mode=view&eventId=147" class="btn btn-hero-primary hero-register-btn" target="_blank" rel="noopener">Register</a>
-              </div>
-            </div>
-          </div>
-          <!-- Slide 3: Summer School -->
-          <div class="hero-slide" data-slide="2" data-register-href="https://pco.postech.ac.kr/pco/events/events.do?mode=view&eventId=147">
-            <div class="container hero-inner">
-              <p class="hero-conf-name">3rd Process Mining Summer School</p>
-              <h1 class="hero-title">Summer School 2026</h1>
-              <p class="hero-date">
-                <span class="hero-date-icon">📅</span> August 27–28, 2026
-                <span class="hero-date-sep">·</span>
-                <span class="hero-date-icon">📍</span> Pohang, Republic of Korea
-              </p>
-              <div class="hero-cta">
-                <a href="https://pco.postech.ac.kr/pco/events/events.do?mode=view&eventId=147" class="btn btn-hero-primary hero-register-btn" target="_blank" rel="noopener">Register</a>
-                <a href="summer-school-program.html" class="btn btn-hero-secondary">Program Details</a>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="hero-carousel-dots" aria-label="Carousel navigation">
-          <button type="button" class="hero-dot active" aria-label="Show Industry Day" data-index="0"></button>
-          <button type="button" class="hero-dot" aria-label="Show ASPAI" data-index="1"></button>
-          <button type="button" class="hero-dot" aria-label="Show Summer School" data-index="2"></button>
-        </div>
-      </div>
-    </section>
-
-    <!-- Welcome Section: single block below hero (no carousel) -->
-    <section id="welcome" class="section welcome welcome-page">
-      <div class="container">
-        <h2 class="section-title">Welcome to South Korea!</h2>
-        <div class="welcome-content-inner">
-          <div class="welcome-photo-wrap">
-            <img src="사진/포항8.jpg" alt="Pohang, POSTECH" class="welcome-photo-large" />
-          </div>
-          <div class="welcome-text-block">
-            <p>We are delighted to invite you to the <strong>Republic of Korea</strong> for the <strong>2nd Asia-Pacific Symposium on Process and Artificial Intelligence (ASPAI 2026)</strong>.</p>
-            <p><strong>Process Mining Industry Day</strong> (<strong>August 24</strong>) will be held in <strong>Seoul</strong>. The <strong>ASPAI Conference</strong> (<strong>August 25–26</strong>) and the <strong>Process Mining Summer School</strong> (<strong>August 27–28</strong>) will be held in <strong>Pohang, Republic of Korea</strong>.</p>
-            <p>The <strong>Asia-Pacific Process Intelligence (APPI) Network</strong> invites researchers, practitioners, and policymakers to this forum dedicated to advancing process intelligence, AI-driven process analytics, and context-sensitive BPM across the Asia-Pacific region.</p>
-            <p>APPI Network was established in 2025 to address the region's unique challenges—diverse regulatory environments, varying BPM maturity levels, and heterogeneous digital ecosystems—while leveraging opportunities enabled by AI, automation, and process data.</p>
-
-            <p class="welcome-signature">We look forward to meeting you in Seoul and Pohang!</p>
-            <p class="welcome-chair"><strong>ASPAI 2026 Organizing Committee</strong></p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-links">
-        <a href="conference.html">Program</a>
-        <a href="call-for-papers.html">Call for Papers</a>
-        <a href="summer-school.html">Summer School</a>
-        <a href="faq.html">FAQs</a>
-        <a href="mailto:eon7777@postech.ac.kr">Contact</a>
-      </div>
-      <p class="footer-copy">© 2026 ASPAI 2026 – 2nd Asia-Pacific Symposium on Process and Artificial Intelligence. All Rights Reserved.</p>
-    </div>
-  </footer>
+  <!-- ============================================================
+       aspaiconference.org 로 들어오면 "현재 연도" 폴더로 이동시키는 페이지입니다.
+       새 연도 사이트를 공개할 때 아래 3곳의 "2026/" 을 새 연도(예: "2027/")로 바꾸세요.
+         ① meta refresh   ② location.replace   ③ 본문 링크
+       ============================================================ -->
+  <meta http-equiv="refresh" content="0; url=2026/" />
 
   <script>
-    document.querySelector('.nav-toggle').addEventListener('click', function () {
-      document.body.classList.toggle('nav-open');
-    });
-    document.querySelectorAll('.nav-menu a').forEach(function (a) {
-      a.addEventListener('click', function () {
-        document.body.classList.remove('nav-open');
-      });
-    });
-    document.querySelectorAll('.has-dropdown').forEach(function (item) {
-      item.addEventListener('mouseenter', function () {
-        this.classList.add('dropdown-open');
-      });
-      item.addEventListener('mouseleave', function () {
-        this.classList.remove('dropdown-open');
-      });
-    });
-
-    // Hero carousel: two slides (ASPAI / Summer School), dots, Register link per slide
-    (function () {
-      var carousel = document.getElementById('heroCarousel');
-      if (!carousel) return;
-      var track = carousel.querySelector('.hero-carousel-track');
-      var slides = carousel.querySelectorAll('.hero-slide');
-      var dots = carousel.querySelectorAll('.hero-dot');
-      var registerBtns = carousel.querySelectorAll('.hero-register-btn');
-      var total = slides.length;
-      var current = 0;
-      var transitionMs = 400;
-
-      function goTo(index) {
-        index = Math.max(0, Math.min(index, total - 1));
-        if (index === current) return;
-        current = index;
-        track.style.transform = 'translateX(-' + (current * 33.333) + '%)';
-        dots.forEach(function (d, i) {
-          d.classList.toggle('active', i === current);
-        });
-        var activeSlide = slides[current];
-        var href = activeSlide && activeSlide.getAttribute('data-register-href');
-        if (href) {
-          registerBtns.forEach(function (btn) {
-            btn.setAttribute('href', href);
-          });
-        }
-      }
-
-      dots.forEach(function (dot) {
-        dot.addEventListener('click', function () {
-          var idx = parseInt(this.getAttribute('data-index'), 10);
-          if (!isNaN(idx)) goTo(idx);
-        });
-      });
-
-      // Ensure Register href is set on load
-      goTo(0);
-    })();
+    // 해시(#key-dates 등)와 쿼리스트링을 유지한 채 이동
+    location.replace("2026/" + location.search + location.hash);
   </script>
+
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0b1020;
+      color: #e8ecf8;
+      font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+      text-align: center;
+      padding: 24px;
+    }
+    a { color: #7aa2ff; }
+  </style>
+</head>
+<body>
+  <p>
+    Redirecting to ASPAI…<br />
+    If nothing happens, <a href="2026/">click here</a>.
+  </p>
 </body>
 </html>
